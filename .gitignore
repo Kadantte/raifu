@@ -15,7 +15,7 @@ node_modules
 /coverage
 
 # production
-/build
+web/dist
 
 # misc
 .DS_Store
@@ -33,3 +33,5 @@ firebase-debug.log*
 .firebase/
 ui-debug.log
 .emulator-data
+
+.runtimeconfig.json

@@ -1,0 +1,75 @@
+{
+	"name": "raifu",
+	"version": "1.5.0",
+	"private": true,
+	"dependencies": {
+		"@date-io/moment": "^1.3.11",
+		"@material-ui/core": "^4.9.2",
+		"@material-ui/icons": "^4.9.1",
+		"@material-ui/lab": "^4.0.0-alpha.42",
+		"@material-ui/pickers": "^3.2.6",
+		"@types/marked": "^4.0.2",
+		"@types/moment": "^2.13.0",
+		"@types/moment-range": "^4.0.0",
+		"@types/node": "^16.11.26",
+		"@types/qs": "^6.9.7",
+		"@types/react": "^17.0.39",
+		"@types/react-big-calendar": "^0.36.2",
+		"@types/react-dom": "^17.0.13",
+		"@types/react-router-dom": "^5.3.3",
+		"core-js": "^2.6.9",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"firebase": "^8.2.2",
+		"marked": "^4.0.12",
+		"moment": "^2.24.0",
+		"moment-range": "^4.0.2",
+		"qs": "^6.10.3",
+		"react": "^17.0.2",
+		"react-big-calendar": "^0.39.3",
+		"react-cookie": "^4.1.1",
+		"react-dom": "^17.0.2",
+		"react-hook-form": "^7.27.1",
+		"react-router-dom": "^6.2.2",
+		"title-case": "^3.0.3",
+		"typescript": "^4.2.3"
+	},
+	"devDependencies": {
+		"@faker-js/faker": "^6.1.1",
+		"@jackfranklin/test-data-bot": "^2.0.0",
+		"@testing-library/jest-dom": "^5.16.3",
+		"@testing-library/react": "^12.1.4",
+		"@testing-library/user-event": "^14.0.4",
+		"@vitejs/plugin-react": "^4.0.4",
+		"jsdom": "^22.1.0",
+		"msw": "^0.39.2",
+		"prettier": "^2.5.1",
+		"vite": "^4.4.9",
+		"vite-plugin-svgr": "^3.2.0",
+		"vite-tsconfig-paths": "^4.2.0",
+		"vitest": "^0.34.4",
+		"whatwg-fetch": "^3.6.18"
+	},
+	"scripts": {
+		"start": "vite",
+		"build": "tsc && vite build",
+		"serve": "vite preview",
+		"test": "vitest watch",
+		"test:no-watch": "vitest run",
+		"test:coverage": "vitest run --coverage",
+		"lint": "eslint src",
+		"lint-fix": "eslint src --fix"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}

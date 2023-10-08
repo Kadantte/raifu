@@ -12,24 +12,24 @@ To run Raifu locally, you will need to follow a certain number of steps to confi
 
 #### Firebase
 
-Create a `.env` file in root to supply your Firebase credentials. If you need to create a Firebase project, you can get
+Create a `.env` file in web to supply your Firebase credentials. If you need to create a Firebase project, you can get
 started [here](https://firebase.google.com/). When you create a Firebase project and add a web app, you will be provided
 with a few settings. Set these in your `.env` file with the following keys:
 
 ```
-REACT_APP_FIREBASE_APIKEY
-REACT_APP_FIREBASE_AUTH_DOMAIN
-REACT_APP_FIREBASE_PROJECT_ID
-REACT_APP_FIREBASE_APP_ID
+VITE_FIREBASE_APIKEY
+VITE_FIREBASE_AUTH_DOMAIN
+VITE_FIREBASE_PROJECT_ID
+VITE_FIREBASE_APP_ID
 ```
 
 Your `.env` file should now look something like this:
 
 ```
-REACT_APP_FIREBASE_APIKEY=myapikey
-REACT_APP_FIREBASE_AUTH_DOMAIN=myauthdomain
-REACT_APP_FIREBASE_PROJECT_ID=myprojectid
-REACT_APP_FIREBASE_APP_ID=my:app:id
+VITE_FIREBASE_APIKEY=myapikey
+VITE_FIREBASE_AUTH_DOMAIN=myauthdomain
+VITE_FIREBASE_PROJECT_ID=myprojectid
+VITE_FIREBASE_APP_ID=my:app:id
 ```
 
 Next, install the `firebase-tools` package from npm with `npm i -g firebase-tools`. This contains the emulator to spin up a local firebase development backend. Then run `firebase login` to login
@@ -40,13 +40,11 @@ Finally, replace the existing project id with your Firebase project id in `.fire
 #### Database
 
 Raifu uses PostgreSQL for data storage and requires a connection to run. If you don't have an existing PostgreSQL
-instance, it is recommended to use Docker to spin one up using the docker-compose file in root. Once configured, create a database and run the migration
-script in `sql/create_tables`.
+instance, it is recommended to use Docker to spin one up using the docker-compose file in root. Once configured, create a database and run the migration script in `sql/create_tables`.
 
 #### Cloud Functions Config
 
-With the emulator installed, and the database spun up, cloud functions need to know where the database is. To point the cloud functions to the database, create a
-`.runtimeconfig.json` file in the `functions` directory containing the database credentials:
+With the emulator installed, and the database spun up, cloud functions need to know where the database is. To point the cloud functions to the database, create a `.runtimeconfig.json` file in the `functions` directory containing the database credentials:
 
 ```
 {
